@@ -40,7 +40,7 @@ export default function WhyUs() {
             className="group relative overflow-hidden rounded-[40px] border border-black/6 bg-[#f7faf8] transition-all"
           >
             <div className="aspect-[16/10] overflow-hidden">
-              <img src="/Users/MAC/.gemini/antigravity/brain/3f539dcf-f163-4cc8-aeec-3f3af7a649fa/security_infrastructure_datacenter_1776039817947.png" alt="Security Infrastructure" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img src="/security_infrastructure_datacenter_1776039817947.png" alt="Security Infrastructure" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
             <div className="p-10">
               <h3 className="text-[32px] font-medium tracking-[-0.03em] text-[#101915]">Global-Scale Protection</h3>
@@ -58,7 +58,7 @@ export default function WhyUs() {
             className="group relative overflow-hidden rounded-[40px] border border-black/6 bg-[#f7faf8] transition-all"
           >
             <div className="aspect-[16/10] overflow-hidden">
-              <img src="/Users/MAC/.gemini/antigravity/brain/3f539dcf-f163-4cc8-aeec-3f3af7a649fa/princeton_research_lab_1776039852466.png" alt="Princeton Research Lab" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img src="/princeton_research_lab_1776039852466.png" alt="Princeton Research Lab" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
             <div className="p-10">
               <h3 className="text-[32px] font-medium tracking-[-0.03em] text-[#101915]">Academic Excellence</h3>
