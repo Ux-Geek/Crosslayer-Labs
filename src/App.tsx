@@ -40,18 +40,21 @@ const team = [
     name: "Henry Birge-Lee",
     role: "Founder & CEO",
     text: "Computer security researcher at Princeton University whose standards and technology shaped the entire certificate authority industry.",
+    image: "/Users/MAC/.gemini/antigravity/brain/3f539dcf-f163-4cc8-aeec-3f3af7a649fa/henry_birge_lee_portrait_1776039880410.png",
     links: [{ type: "Web", icon: Globe }],
   },
   {
     name: "Grace Cimaszewski",
     role: "Founder & CTO",
     text: "A graduate student at Princeton University who built global frameworks to understand the threat surface of millions of websites.",
+    image: "/Users/MAC/.gemini/antigravity/brain/3f539dcf-f163-4cc8-aeec-3f3af7a649fa/grace_cimaszewski_portrait_1776039908894.png",
     links: [{ type: "GitHub", icon: Github }],
   },
   {
     name: "Dr. Prateek Mittal",
     role: "Founder & Chief Scientist",
     text: "Professor of Electrical and Computer Engineering at Princeton University specializing in network AI security.",
+    image: "/Users/MAC/.gemini/antigravity/brain/3f539dcf-f163-4cc8-aeec-3f3af7a649fa/prateek_mittal_portrait_1776039940966.png",
     links: [{ type: "LinkedIn", icon: Linkedin }, { type: "Web", icon: Globe }],
   },
 ];
@@ -169,24 +172,67 @@ export default function App() {
           </div>
         </section>
 
-        {/* Credibility Section */}
-        <section className="border-t border-black/6 bg-[#f7faf8]">
-          <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-12 lg:py-32">
-            <div>
-              <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-[#6d7772]">Credibility</p>
-              <h2 className="font-display mt-4 text-[42px] leading-[1.1] tracking-[-0.04em] text-[#101915] md:text-[52px]">
-                Trust the team that already secured 500 million+ HTTPS websites
+        {/* Credibility / Why Choose Us Section */}
+        <section id="why-us" className="border-t border-black/6 bg-white overflow-hidden">
+          <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 lg:px-12 lg:py-32">
+            <div className="mb-16 max-w-3xl">
+              <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-[#6d7772]">Why Choose Crosslayer</p>
+              <h2 className="font-display mt-6 text-[48px] leading-[1] tracking-[-0.04em] text-[#101915] md:text-[64px]">
+                Elite security infrastructure backed by Princeton research.
               </h2>
             </div>
-            <div className="grid gap-6 md:grid-cols-2">
+            
+            <div className="grid gap-8 lg:grid-cols-2">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="group relative overflow-hidden rounded-[40px] border border-black/6 bg-[#f7faf8] transition-all"
+              >
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img src="/Users/MAC/.gemini/antigravity/brain/3f539dcf-f163-4cc8-aeec-3f3af7a649fa/security_infrastructure_datacenter_1776039817947.png" alt="Security Infrastructure" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
+                <div className="p-10">
+                  <h3 className="text-[32px] font-medium tracking-[-0.03em] text-[#101915]">Global-Scale Protection</h3>
+                  <p className="mt-4 text-[18px] leading-relaxed text-muted">
+                    We secure the critical backbone of web operations. Our foundation is built on protecting over 500 million HTTPS websites from sophisticated hijacks and infrastructure attacks.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="group relative overflow-hidden rounded-[40px] border border-black/6 bg-[#f7faf8] transition-all"
+              >
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img src="/Users/MAC/.gemini/antigravity/brain/3f539dcf-f163-4cc8-aeec-3f3af7a649fa/princeton_research_lab_1776039852466.png" alt="Princeton Research Lab" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
+                <div className="p-10">
+                  <h3 className="text-[32px] font-medium tracking-[-0.03em] text-[#101915]">Academic Excellence</h3>
+                  <p className="mt-4 text-[18px] leading-relaxed text-muted">
+                    Born from a cutting-edge network security research lab at Princeton University, we bring academic-grade rigor to real-world security challenges.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+
+            <div className="mt-16 grid gap-6 md:grid-cols-3">
               <InfoCard 
-                title="Comprehensive Protection" 
-                text="We discover, analyze, and monitor all layers of network infrastructure on first and third-party services." 
+                title="Comprehensive Discovery" 
+                text="Automated mapping of your entire attack surface, including APIs and hidden web services." 
+                icon={Search}
+              />
+              <InfoCard 
+                title="Continuous Monitoring" 
+                text="24/7 scrutiny of infrastructure signals to identify and neutralize threats in real-time." 
                 icon={Shield}
               />
               <InfoCard 
-                title="Advanced Threat Detection" 
-                text="We correlate signals across different layers of the network stack to neutralize threats." 
+                title="Signal Correlation" 
+                text="Advanced cross-layer analytics that connect fragmented patterns into actionable security intelligence." 
                 icon={Activity}
               />
             </div>
@@ -254,14 +300,14 @@ export default function App() {
         </section>
 
         {/* Team Section */}
-        <section id="team" className="mx-auto max-w-7xl px-5 py-20 md:px-8 lg:px-12 lg:py-32">
+        <section id="team" className="mx-auto max-w-7xl px-5 py-24 md:px-8 lg:px-12 lg:py-32">
           <div className="max-w-3xl">
-            <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-[#6d7772]">Meet Our Team</p>
+            <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-[#6d7772]">Our Founders</p>
             <h2 className="font-display mt-4 text-[42px] leading-[1.1] tracking-[-0.04em] text-[#101915] md:text-[52px]">
-              Our team of security experts brings decades of combined experience in network security.
+              The world's leading experts in network security.
             </h2>
           </div>
-          <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {team.map((person, idx) => (
               <motion.div 
                 key={person.name}
@@ -269,21 +315,41 @@ export default function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="rounded-[32px] border border-black/6 bg-[#f8faf8] p-8"
+                className="group relative overflow-hidden rounded-xl border border-black/6 bg-white shadow-sm transition-all hover:shadow-xl"
               >
-                <div className="mb-8 aspect-[4/5] rounded-[24px] bg-[linear-gradient(135deg,#dce8e0,#eff5f1)] flex items-center justify-center">
-                  <Users className="h-16 w-16 text-deep-green/20" />
+                <div className="aspect-[1/1.2] overflow-hidden grayscale transition-[filter] duration-500 group-hover:grayscale-0">
+                  <img 
+                    src={person.image} 
+                    alt={person.name} 
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
-                <h3 className="text-[24px] font-medium tracking-[-0.03em] text-[#101915]">{person.name}</h3>
-                <p className="mt-1 text-sm font-medium text-deep-green">{person.role}</p>
-                <p className="mt-5 text-[16px] leading-relaxed text-muted">{person.text}</p>
-                <div className="mt-6 flex flex-wrap gap-4">
-                  {person.links.map((link) => (
-                    <a key={link.type} href="#" className="flex items-center gap-1.5 text-sm text-deep-green transition hover:underline underline-offset-4">
-                      <link.icon className="h-4 w-4" />
-                      {link.type}
-                    </a>
-                  ))}
+                
+                {/* Static Base Content */}
+                <div className="p-6 transition-opacity duration-300 group-hover:opacity-0">
+                  <h3 className="text-[20px] font-semibold tracking-[-0.02em] text-[#101915]">{person.name}</h3>
+                  <p className="mt-1 text-sm font-medium text-deep-green">{person.role}</p>
+                </div>
+
+                {/* Hover Content */}
+                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/40 to-transparent p-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileHover={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <h3 className="text-[24px] font-semibold text-white">{person.name}</h3>
+                    <p className="mt-1 text-sm font-medium text-white/80">{person.role}</p>
+                    <p className="mt-4 text-[14px] leading-relaxed text-white/70">{person.text}</p>
+                    <div className="mt-6 flex flex-wrap gap-4">
+                      {person.links.map((link) => (
+                        <a key={link.type} href="#" className="flex items-center gap-1.5 text-xs text-white transition hover:text-deep-green">
+                          <link.icon className="h-3.5 w-3.5" />
+                          {link.type}
+                        </a>
+                      ))}
+                    </div>
+                  </motion.div>
                 </div>
               </motion.div>
             ))}
