@@ -1,21 +1,18 @@
 "use client";
 
-import { ShieldCheck } from "lucide-react";
-
 export default function Navbar() {
   return (
-    <header className="fixed top-[66px] left-1/2 z-50 flex h-[54px] w-full max-w-[664px] -translate-x-1/2 flex-col items-start gap-[10px] rounded-[99px] border-[0.5px] border-[rgba(160,160,160,0.34)] bg-white p-[10px] shadow-sm backdrop-blur-xl">
-      <div className="flex h-[34px] w-full flex-row items-center justify-center gap-[101px]">
+    <header className="fixed top-[66px] left-[72px] z-50 flex h-[54px] w-[664px] flex-col items-start gap-[10px] rounded-[99px] border-[0.5px] border-[rgba(160,160,160,0.34)] bg-white p-[10px] shadow-sm backdrop-blur-xl">
+      <div className="flex h-[34px] w-full flex-row items-center justify-center gap-[90px]">
         
         {/* Logo Frame */}
-        <a href="#" className="flex h-[34px] w-[154px] flex-row items-center justify-center gap-1 p-[10px]">
+        <a href="#" className="flex h-[34px] w-auto flex-row items-center justify-center gap-1.5 p-[10px] pl-[14px]">
           {/* Logo Graphic */}
-          <div className="flex h-[24.01px] w-[28.29px] items-center justify-center rounded-sm bg-gradient-to-b from-[#00FA08] to-[#015404]">
-             <ShieldCheck className="h-4 w-4 text-white" strokeWidth={2.5}/>
-          </div>
+          <img src="/logo.svg" alt="CrossLayer Labs Logo" className="h-[24.01px] w-[28.29px] flex-none" />
+          
           {/* Default Logo Fallback */}
           <span 
-            className="w-[114px] text-[16px] font-medium leading-[110%] tracking-[-0.01em] text-[#575656]"
+            className="w-auto whitespace-nowrap text-[16px] font-medium leading-[110%] tracking-[-0.01em] text-[#575656]"
             style={{ fontFamily: "'SF Pro Display', -apple-system, sans-serif" }}
           >
             CrossLayer Labs
