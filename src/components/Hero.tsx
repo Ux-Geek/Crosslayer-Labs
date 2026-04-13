@@ -13,9 +13,6 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl"
         >
-          <div className="mb-5 inline-flex items-center rounded-full border border-deep-green/12 bg-deep-green/4 px-3 py-1.5 text-[12px] font-medium uppercase tracking-[0.14em] text-deep-green">
-            Network security infrastructure
-          </div>
           <h1 className="font-display text-[48px] font-medium leading-[1] tracking-[-0.04em] text-[#101915] md:text-[64px] lg:text-[72px]">
             Securing web infrastructure
           </h1>

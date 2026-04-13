@@ -2,8 +2,8 @@
 
 export default function Navbar() {
   return (
-    <header className="fixed top-[66px] left-[72px] z-50 flex h-[54px] w-[664px] flex-col items-start gap-[10px] rounded-[99px] border-[0.5px] border-[rgba(160,160,160,0.34)] bg-white p-[10px] shadow-sm backdrop-blur-xl">
-      <div className="flex h-[34px] w-full flex-row items-center justify-center gap-[90px]">
+    <header className="fixed top-[66px] left-[144px] z-50 flex h-[60px] w-[664px] flex-col items-start gap-[10px] rounded-[99px] border-[0.5px] border-[rgba(160,160,160,0.12)] bg-white p-[10px] shadow-[0_4px_24px_rgba(0,0,0,0.04)] backdrop-blur-xl">
+      <div className="flex h-[40px] w-full flex-row items-center justify-center gap-[90px]">
         
         {/* Logo Frame */}
         <a href="#" className="flex h-[34px] w-auto flex-row items-center justify-center gap-1.5 p-[10px] pl-[14px]">
