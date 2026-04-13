@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Gowun Batang", serif;
+  --color-deep-green: #153c2f;
+  --color-deep-green-hover: #1b4a3a;
+  --color-muted: #69756f;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+@layer utilities {
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(21,60,47,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(21,60,47,0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
