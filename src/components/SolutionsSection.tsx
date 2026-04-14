@@ -12,9 +12,9 @@ const solutions = [
   },
   {
     title: "Security Analytics.",
-    text: "Advanced threat intelligence and analytics to identify patterns and prevent attacks before they happen.",
+    text: "Advanced threat intelligence and analytics to identify patterns and prevent attacks before happening.",
     icon: Radar,
-    width: "310px",
+    width: "360px",
   },
   {
     title: "Ongoing Monitoring.",
@@ -43,8 +43,8 @@ export default function SolutionsSection() {
         />
         <div className="absolute inset-0 bg-black/40" />
 
-        {/* "Our Security Solutions" — left:44, from bottom ~120px, 36px #EBEBEB */}
-        <div className="absolute bottom-[104px] left-[44px]">
+        {/* "Our Security Solutions" — left:44, from bottom ~88px, 36px #EBEBEB */}
+        <div className="absolute bottom-[88px] left-[44px]">
           <h2
             className="text-[36px] font-medium leading-[110%] text-[#EBEBEB]"
             style={{ width: "529px" }}
@@ -77,7 +77,7 @@ export default function SolutionsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mt-[20px] flex flex-col items-center justify-start rounded-[24px] border border-[#333333] bg-[#171717] pl-[66px] md:flex-row"
+        className="mt-[20px] flex flex-col items-center justify-start rounded-[40px] border border-[#333333] bg-[#171717] pl-[66px] md:flex-row"
         style={{ height: "209px", gap: "120px" }}
       >
         {solutions.map((item) => (
