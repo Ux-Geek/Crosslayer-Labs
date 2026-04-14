@@ -96,7 +96,7 @@ export default function SolutionsSection() {
               style={{ fontFamily: "'SF Pro Display', -apple-system, sans-serif" }}
             >
               <span className="font-semibold">{item.title}</span>{" "}
-              {item.text}
+              <span className="text-[#ACACAC]">{item.text}</span>
             </p>
           </div>
         ))}
