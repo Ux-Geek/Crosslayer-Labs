@@ -14,13 +14,13 @@ const solutions = [
     title: "Security Analytics.",
     text: "Advanced threat intelligence and analytics to identify patterns and prevent attacks before they happen.",
     icon: Radar,
-    width: "280px",
+    width: "310px",
   },
   {
     title: "Ongoing Monitoring.",
     text: "Monitoring and correlating attack signals across layers for rapid response and mitigation.",
     icon: AlarmClock,
-    width: "280px",
+    width: "310px",
   },
 ];
 
@@ -78,7 +78,7 @@ export default function SolutionsSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className="mt-[20px] flex flex-col items-center justify-start rounded-[24px] border border-[#333333] bg-[#171717] pl-[66px] md:flex-row"
-        style={{ height: "209px", gap: "88px" }}
+        style={{ height: "209px", gap: "120px" }}
       >
         {solutions.map((item) => (
           <div
@@ -89,10 +89,9 @@ export default function SolutionsSection() {
             {/* Icon — 24×24, grey */}
             <item.icon className="h-6 w-6 flex-none text-[#8E8D8D]" strokeWidth={1.5} />
 
-            {/* Text — 16px, white/grey */}
+            {/* Text — 16px, white/grey, 120% line-height */}
             <p
-              className="text-[16px] font-normal leading-[110%] tracking-[-0.005em] text-white"
-              style={{ maxWidth: "280px" }}
+              className="text-[16px] font-normal leading-[120%] tracking-[-0.005em] text-white"
             >
               <span className="font-medium">{item.title}</span>{" "}
               <span className="font-normal text-[#ACACAC]">{item.text}</span>
