@@ -30,27 +30,41 @@ const cards = [
   },
 ];
 
+const proseLines = [
+  "The Crosslayer Labs founding team invented",
+  "Multi-Perspective Issuance Corroboration which now",
+  "secures the issuance of every HTTPS certificate."
+];
+
 export default function WhyUs() {
-  const textRef = useRef<HTMLHeadingElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const linesRef = useRef<(HTMLSpanElement | null)[]>([]);
 
   useEffect(() => {
-    if (!textRef.current) return;
-
-    const words = textRef.current.querySelectorAll(".word");
-    gsap.fromTo(words,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        stagger: 0.08,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: textRef.current,
-          start: "top 85%",
-        }
+    if (!containerRef.current) return;
+    
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 80%",
+        end: "bottom 60%",
+        scrub: 1,
       }
-    );
+    });
+
+    linesRef.current.forEach((line) => {
+      if (line) {
+        tl.fromTo(line, 
+          { opacity: 0, y: 40 },
+          { 
+            opacity: 1, 
+            y: 0, 
+            duration: 1, 
+            ease: "power2.out"
+          }
+        );
+      }
+    });
   }, []);
 
   return (
@@ -109,15 +123,16 @@ export default function WhyUs() {
         ))}
       </div>
 
-      {/* Founders Invention Section — Centered, px spacing above and below */}
-      <div className="my-[360px] flex flex-col items-center justify-center text-center">
-        <h2
-          ref={textRef}
-          className="font-display text-[42px] leading-[1.1] tracking-[-0.04em] text-[#101915] md:text-[52px] max-w-5xl"
-        >
-          {"The Crosslayer Labs founding team invented Multi-Perspective Issuance Corroboration which now secures the issuance of every HTTPS certificate.".split(" ").map((word, i) => (
-            <span key={i} className="word inline-block mr-[0.2em] opacity-0">
-              {word}
+      {/* Founders Invention Section — Centered, reduced bottom spacing, extra tracking */}
+      <div ref={containerRef} className="mt-[200px] mb-[80px] flex flex-col items-center justify-center text-center">
+        <h2 className="font-display text-[42px] leading-[1.3] tracking-[0.05em] text-[#101915] md:text-[52px] max-w-5xl">
+          {proseLines.map((line, idx) => (
+            <span 
+              key={idx} 
+              ref={el => { linesRef.current[idx] = el; }}
+              className="block opacity-0"
+            >
+              {line}
             </span>
           ))}
         </h2>
