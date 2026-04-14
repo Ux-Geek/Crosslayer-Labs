@@ -29,7 +29,7 @@ const team = [
 
 export default function Team() {
   return (
-    <section id="team" className="mx-auto max-w-7xl px-5 py-24 md:px-8 lg:px-12 lg:py-32">
+    <section id="team" className="mx-auto max-w-7xl px-5 pt-[216px] pb-24 md:px-8 lg:px-12 lg:pt-[248px] lg:pb-32">
       <div className="max-w-3xl">
         <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-[#6d7772]">Our Founders</p>
         <h2 className="font-display mt-4 text-[42px] leading-[1.1] tracking-[-0.04em] text-[#101915] md:text-[52px]">
@@ -44,9 +44,10 @@ export default function Team() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1 }}
-            className="group relative overflow-hidden rounded-[24px] bg-[#101915] transition-all hover:shadow-2xl"
+            className="group relative overflow-hidden rounded-[12px] bg-[#101915] transition-all hover:shadow-2xl"
+            style={{ width: "414px", height: "493px" }}
           >
-            <div className="relative aspect-[1/1.2] overflow-hidden grayscale transition-[filter] duration-500 group-hover:grayscale-0">
+            <div className="relative h-full w-full overflow-hidden grayscale transition-[filter] duration-500 group-hover:grayscale-0">
               <img 
                 src={person.image} 
                 alt={person.name} 
