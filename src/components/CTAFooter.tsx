@@ -73,12 +73,8 @@ export default function CTAFooter() {
               <div className="mt-20 flex flex-col">
                 <span className="text-xs uppercase tracking-widest text-white/30">Navigation</span>
                 <nav className="mt-8 flex flex-col gap-4 text-[24px] font-medium text-white/70">
-                  <a href="#" className="hover:text-white transition-colors flex items-center gap-2">
-                    Case Studies <ArrowRight className="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
-                  <a href="#" className="hover:text-white transition-colors">Insights</a>
-                  <a href="#" className="hover:text-white transition-colors">About us</a>
-                  <a href="#" className="hover:text-white transition-colors">Contact</a>
+                  <a href="#research" className="hover:text-white transition-colors">Research</a>
+                  <a href="#blog" className="hover:text-white transition-colors">Blog</a>
                 </nav>
               </div>
             </div>

@@ -19,30 +19,18 @@ export default function Navbar() {
         </a>
 
         {/* Navigation Links */}
-        <nav className="flex h-[19px] w-[352px] flex-row items-center gap-6">
+        <nav className="flex flex-row items-center gap-12">
           <a
-            href="#solutions"
-            className="w-auto text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#575656] transition-colors hover:text-[#2A2A2A]"
+            href="#research"
+            className="text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#575656] transition-colors hover:text-[#2A2A2A]"
           >
-            Solutions
+            Research
           </a>
           <a
-            href="#why-us"
-            className="w-auto text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#575656] transition-colors hover:text-[#2A2A2A]"
+            href="#blog"
+            className="text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#575656] transition-colors hover:text-[#2A2A2A]"
           >
-            Why Choose Us
-          </a>
-          <a
-            href="#team"
-            className="w-auto text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#575656] transition-colors hover:text-[#2A2A2A]"
-          >
-            Team
-          </a>
-          <a
-            href="#industries"
-            className="w-auto text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#575656] transition-colors hover:text-[#2A2A2A]"
-          >
-            Industry
+            Blog
           </a>
         </nav>
 
