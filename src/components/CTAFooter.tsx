@@ -23,18 +23,18 @@ export default function CTAFooter() {
               San Francisco, CA 94110
             </p>
 
-            <h2 className="font-display mt-20 text-[48px] leading-[1.1] tracking-[-0.04em] md:text-[64px] lg:text-[72px]">
+            <h2 className="font-display mt-20 text-[36px] leading-[1.1] tracking-[-0.04em] sm:text-[44px] md:text-[64px] lg:text-[72px]">
               Ready to secure your <br /> 
               infrastructure.
             </h2>
 
-            <div className="mt-12 flex max-w-md items-center gap-2 rounded-full bg-white/5 p-1 pl-6">
+            <div className="mt-12 flex w-full max-w-md items-center gap-2 rounded-full bg-white/5 p-1 pl-4 md:pl-6">
               <input 
                 type="email" 
                 placeholder="Email address" 
-                className="flex-1 bg-transparent py-2 text-sm outline-none placeholder:text-white/30"
+                className="w-0 flex-1 bg-transparent py-2 text-sm outline-none placeholder:text-white/30"
               />
-              <button className="flex h-10 items-center justify-center gap-2 rounded-full bg-[#00FF00] px-6 text-sm font-semibold text-black transition hover:bg-[#00DD00]">
+              <button className="flex h-10 flex-none items-center justify-center gap-2 rounded-full bg-[#00FF00] px-4 text-sm font-semibold text-black transition hover:bg-[#00DD00] md:px-6">
                 Subscribe
               </button>
             </div>

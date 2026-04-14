@@ -90,8 +90,7 @@ export default function WhyUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1 }}
-            className="relative flex flex-col items-start justify-between rounded-[40px] border border-[#E3E3E3] bg-[#FAFAFA] p-[35px] py-[38px]"
-            style={{ width: "414px", height: "493px" }}
+            className="relative flex w-full flex-col items-start justify-between rounded-[40px] border border-[#E3E3E3] bg-[#FAFAFA] p-[35px] py-[38px] md:h-[493px] md:w-[414px]"
           >
             {/* Top Frame — Icon + Title */}
             <div className="flex flex-row items-center gap-[8px]">

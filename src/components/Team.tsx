@@ -44,10 +44,9 @@ export default function Team() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1 }}
-            className="group relative overflow-hidden rounded-[12px] bg-[#101915] transition-all hover:shadow-2xl"
-            style={{ width: "414px", height: "493px" }}
+            className="group relative w-full overflow-hidden rounded-[12px] bg-[#101915] transition-all hover:shadow-2xl md:h-[493px] md:w-[414px]"
           >
-            <div className="relative h-full w-full overflow-hidden grayscale transition-[filter] duration-500 group-hover:grayscale-0">
+            <div className="relative aspect-[414/493] w-full overflow-hidden grayscale transition-[filter] duration-500 group-hover:grayscale-0 md:h-full">
               <img 
                 src={person.image} 
                 alt={person.name} 

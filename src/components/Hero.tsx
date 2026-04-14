@@ -40,15 +40,22 @@ export default function Hero() {
             <p className="mb-5 text-[12px] font-medium uppercase tracking-[0.16em] text-[#6d7772]">
               Backed By
             </p>
-            <div className="flex flex-wrap items-center gap-4 text-sm text-deep-green">
-              {['Y-Combinator', 'AE Investments', 'Long Journey'].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-full border border-black/6 bg-white px-5 py-2.5 shadow-[0_10px_30px_rgba(0,0,0,0.03)]"
-                >
-                  {item}
-                </div>
-              ))}
+            <div className="flex flex-wrap items-center gap-6">
+              {/* Y Combinator SVG */}
+              <div className="flex h-[42px] items-center rounded-full border border-black/6 bg-white px-5 shadow-[0_10px_30px_rgba(0,0,0,0.03)]">
+                <img src="/yc.svg" alt="Y Combinator" className="mr-3 h-5 w-auto" />
+                <span className="text-sm font-bold text-[#FF6600]">Combinator</span>
+              </div>
+
+              {/* AE Investments SVG */}
+              <div className="flex h-[42px] items-center rounded-full border border-black/6 bg-white px-5 shadow-[0_10px_30px_rgba(0,0,0,0.03)]">
+                <img src="/ae-investments.svg" alt="AE Investments" className="h-[18px] w-auto text-deep-green" />
+              </div>
+
+              {/* Long Journey */}
+              <div className="flex h-[42px] items-center rounded-full border border-black/6 bg-white px-5 shadow-[0_10px_30px_rgba(0,0,0,0.03)] text-sm font-medium text-[#101915]">
+                Long Journey
+              </div>
             </div>
           </div>
         </motion.div>

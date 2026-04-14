@@ -33,17 +33,17 @@ export default function FAQ() {
     <section id="faq" className="mx-auto flex max-w-[492px] flex-col items-center px-5 py-32">
       {/* Header — FAQ 66px */}
       <div className="flex flex-col items-center gap-[15px]">
-        <h2 className="font-sans text-[66px] font-medium leading-[130%] text-black">
+        <h2 className="font-sans text-[44px] font-medium leading-[130%] text-black md:text-[66px]">
           FAQ
         </h2>
         
         {/* Tabs */}
-        <div className="flex items-center gap-[24px]">
+        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-[24px]">
           {tabs.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`flex h-[44px] items-center justify-center rounded-full px-[15px] text-[16px] font-medium tracking-[0.01em] transition-all
+              className={`flex h-[44px] items-center justify-center rounded-full px-4 text-[15px] font-medium tracking-[0.01em] transition-all md:px-[15px] md:text-[16px]
                 ${activeTab === tab 
                   ? "bg-[#EDEDED] border border-[#E3E3E3] text-[#171717]" 
                   : "text-[#8A8A8A] border border-transparent hover:text-[#171717]"

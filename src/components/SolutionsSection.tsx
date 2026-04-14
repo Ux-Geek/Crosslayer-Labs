@@ -77,14 +77,14 @@ export default function SolutionsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mt-[20px] flex flex-col items-center justify-start rounded-[40px] border border-[#333333] bg-[#171717] pl-[66px] md:flex-row"
-        style={{ height: "209px", gap: "120px" }}
+        className="mt-[20px] flex flex-col items-center justify-start rounded-[40px] border border-[#333333] bg-[#171717] py-10 pl-[40px] md:flex-row md:py-0 md:pl-[66px]"
+        style={{ minHeight: "209px", gap: "60px" }}
       >
         {solutions.map((item) => (
           <div
             key={item.title}
             className="flex flex-col items-start gap-[24px] p-[10px]"
-            style={{ width: item.width, height: "122px" }}
+            style={{ width: "100%", maxWidth: item.width }}
           >
             {/* Icon — 24×24, grey */}
             <item.icon className="h-6 w-6 flex-none text-[#8E8D8D]" strokeWidth={1.5} />
