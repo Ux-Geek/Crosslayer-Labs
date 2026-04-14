@@ -92,9 +92,10 @@ export default function SolutionsSection() {
             {/* Text — 16px, white/grey */}
             <p
               className="text-[16px] font-normal leading-[110%] tracking-[-0.005em] text-white"
+              style={{ width: "371px" }}
             >
-              <span className="font-semibold">{item.title}</span>{" "}
-              <span className="text-[#ACACAC]">{item.text}</span>
+              <span className="font-medium">{item.title}</span>{" "}
+              <span className="font-normal text-[#ACACAC]">{item.text}</span>
             </p>
           </div>
         ))}
