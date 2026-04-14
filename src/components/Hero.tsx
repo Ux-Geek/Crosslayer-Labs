@@ -42,19 +42,19 @@ export default function Hero() {
             </p>
             <div className="flex flex-wrap items-center gap-12 pt-4">
               {/* Y Combinator */}
-              <div className="flex items-center gap-2 opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
-                <img src="/yc.svg" alt="Y Combinator" className="h-7 w-auto" />
-                <span className="text-[18px] font-bold tracking-tight text-[#101915]">Combinator</span>
+              <div className="flex items-center gap-2">
+                <img src="/yc.svg" alt="Y Combinator" className="h-6 w-auto" />
+                <span className="text-[18px] font-bold tracking-tight text-[#FF6600]">Combinator</span>
               </div>
 
               {/* AE Investments */}
-              <div className="flex items-center opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
-                <img src="/ae-investments.svg" alt="AE Investments" className="h-[22px] w-auto" />
+              <div className="flex items-center">
+                <img src="/ae-investments.svg" alt="AE Investments" className="h-[20px] w-auto" />
               </div>
 
               {/* Long Journey */}
-              <div className="flex items-center opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
-                <span className="text-[18px] font-medium tracking-tight text-[#101915]">Long Journey</span>
+              <div className="flex items-center">
+                <img src="/long-journey.webp" alt="Long Journey" className="h-[22px] w-auto" />
               </div>
             </div>
           </div>

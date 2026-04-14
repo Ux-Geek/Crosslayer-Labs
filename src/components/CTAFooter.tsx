@@ -81,9 +81,10 @@ export default function CTAFooter() {
           </div>
         </div>
 
-        {/* Bottom Giant Wordmark — 0.9x scale + hover glow */}
-        <div className="group/wordmark pointer-events-auto relative z-0 mt-12 mb-[-50px] flex w-full scale-[0.9] items-center justify-center overflow-hidden opacity-5 select-none transition-all duration-700 hover:opacity-10 hover:text-[#00FF00]">
-          <div className="flex items-center text-[150px] md:text-[220px] lg:text-[280px] font-display font-bold whitespace-nowrap leading-none tracking-tighter">
+        {/* Bottom Giant Wordmark — Responsive scale + hover glow */}
+        <div className="group/wordmark pointer-events-auto relative z-0 mt-12 mb-[-30px] flex w-full scale-[0.9] items-center justify-center overflow-hidden opacity-5 select-none transition-all duration-700 hover:opacity-10 hover:text-[#00FF00] md:mb-[-50px]">
+          <div className="flex items-center gap-6 font-display font-bold whitespace-nowrap leading-none tracking-tighter text-[70px] sm:text-[120px] md:gap-12 md:text-[220px] lg:text-[280px]">
+            <img src="/logo.svg" alt="" className="h-[50px] w-auto transition-all duration-700 group-hover/wordmark:opacity-100 opacity-50 grayscale group-hover/wordmark:grayscale-0 sm:h-[100px] md:h-[200px]" />
             CROSSLAYER
           </div>
         </div>
