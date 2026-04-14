@@ -13,9 +13,9 @@ export default function CTAFooter() {
           
           {/* Left Column: CTA + Newsletter Style */}
           <div className="flex flex-col">
-            <div className="flex items-center gap-3">
-              <img src="/logo.svg" alt="Crosslayer" className="h-10 w-auto" />
-              <span className="text-[20px] font-semibold tracking-tight">Crosslayer™</span>
+            <div className="flex w-fit items-center gap-2 rounded-full bg-[#00FF00] px-4 py-2 text-black">
+              <img src="/logo.svg" alt="Crosslayer" className="h-6 w-auto brightness-0" />
+              <span className="text-[16px] font-bold tracking-tight">CrossLayer Labs</span>
             </div>
             
             <p className="mt-8 text-sm text-white/50">
@@ -81,8 +81,8 @@ export default function CTAFooter() {
           </div>
         </div>
 
-        {/* Bottom Giant Wordmark */}
-        <div className="pointer-events-none mt-12 mb-[-50px] flex w-full items-center justify-center overflow-hidden opacity-5 select-none">
+        {/* Bottom Giant Wordmark — 0.9x scale */}
+        <div className="pointer-events-none mt-12 mb-[-50px] flex w-full scale-[0.9] items-center justify-center overflow-hidden opacity-5 select-none">
           <div className="flex items-center gap-12 text-[150px] md:text-[220px] lg:text-[280px] font-display font-bold whitespace-nowrap leading-none tracking-tighter">
             <img src="/logo.svg" alt="" className="h-[200px] w-auto opacity-50 grayscale" />
             CROSSLAYER
