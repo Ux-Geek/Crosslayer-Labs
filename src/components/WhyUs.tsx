@@ -35,7 +35,7 @@ export default function WhyUs() {
         viewport={{ once: true }}
         className="font-display mb-[59px] text-[42px] leading-[1.1] tracking-[-0.04em] text-[#7A7A7A] md:text-[52px]"
       >
-        Trust the team that already secured 500 million+ HTTPS websites
+        Trust the team that already secured <br /> 500 million+ HTTPS websites
       </motion.h2>
 
       {/* Cards Container — gap 36px */}
@@ -61,16 +61,23 @@ export default function WhyUs() {
               </h3>
             </div>
 
-            {/* Bottom Copy — 16px, 500, 110%/130%, #8A8A8A */}
+            {/* Bottom Copy — 16px, Normal, 110%/130%, #8A8A8A */}
             <p
-              className="text-[16px] font-medium tracking-[0.01em] text-[#8A8A8A]"
-              style={{ 
-                fontFamily: "'SF Pro Display', -apple-system, sans-serif", 
+              className="text-[16px] font-normal tracking-[0.01em] text-[#8A8A8A]"
+              style={{
                 width: "275px",
                 lineHeight: card.lh || "110%"
               }}
             >
-              {card.text}
+              {card.text.includes("Princeton University") ? (
+                <>
+                  {card.text.split("Princeton University")[0]}
+                  <span className="text-[#171717]">Princeton University</span>
+                  {card.text.split("Princeton University")[1]}
+                </>
+              ) : (
+                card.text
+              )}
             </p>
           </motion.div>
         ))}
