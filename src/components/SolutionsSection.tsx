@@ -33,7 +33,7 @@ export default function SolutionsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="relative w-full overflow-hidden rounded-[24px] border border-[#BABABA]"
+        className="relative w-full overflow-hidden rounded-[40px] border border-[#BABABA]"
         style={{ height: "579px" }}
       >
         <img

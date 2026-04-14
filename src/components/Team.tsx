@@ -44,7 +44,7 @@ export default function Team() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1 }}
-            className="group relative overflow-hidden rounded-xl border border-black/6 bg-white shadow-sm transition-all hover:shadow-xl"
+            className="group relative overflow-hidden rounded-[40px] border border-black/6 bg-white shadow-sm transition-all hover:shadow-xl"
           >
             <div className="aspect-[1/1.2] overflow-hidden grayscale transition-[filter] duration-500 group-hover:grayscale-0">
               <img 
