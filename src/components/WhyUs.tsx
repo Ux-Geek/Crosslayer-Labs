@@ -133,9 +133,17 @@ export default function WhyUs() {
             <span 
               key={idx} 
               ref={el => { linesRef.current[idx] = el; }}
-              className="block opacity-0"
+              className="block opacity-10"
             >
-              {line}
+              {line.includes("every") ? (
+                <>
+                  {line.split("every")[0]}
+                  <span className="text-[#00FF00]">every</span>
+                  {line.split("every")[1]}
+                </>
+              ) : (
+                line
+              )}
             </span>
           ))}
         </h2>

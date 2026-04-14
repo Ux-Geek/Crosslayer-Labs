@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import MobileMenu from "@/components/MobileMenu";
 import Hero from "@/components/Hero";
 import SolutionsSection from "@/components/SolutionsSection";
 import WhyUs from "@/components/WhyUs";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-[#101915] antialiased">
       <Navbar />
+      <MobileMenu />
       <main>
         <Hero />
         <WhyUs />
