@@ -35,19 +35,19 @@ export default function WhyUs() {
 
   useEffect(() => {
     if (!textRef.current) return;
-    
+
     const words = textRef.current.querySelectorAll(".word");
-    gsap.fromTo(words, 
-      { opacity: 0, y: 20 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 0.8, 
-        stagger: 0.05,
+    gsap.fromTo(words,
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        stagger: 0.08,
         ease: "power2.out",
         scrollTrigger: {
           trigger: textRef.current,
-          start: "top 90%",
+          start: "top 85%",
         }
       }
     );
@@ -109,9 +109,9 @@ export default function WhyUs() {
         ))}
       </div>
 
-      {/* Founders Invention Section — Centered, 44px below cards */}
-      <div className="mt-[44px] flex flex-col items-center justify-center text-center">
-        <h2 
+      {/* Founders Invention Section — Centered, px spacing above and below */}
+      <div className="my-[360px] flex flex-col items-center justify-center text-center">
+        <h2
           ref={textRef}
           className="font-display text-[42px] leading-[1.1] tracking-[-0.04em] text-[#101915] md:text-[52px] max-w-5xl"
         >
