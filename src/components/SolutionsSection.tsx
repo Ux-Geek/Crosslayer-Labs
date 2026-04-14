@@ -43,8 +43,8 @@ export default function SolutionsSection() {
         />
         <div className="absolute inset-0 bg-black/40" />
 
-        {/* "Our Security Solutions" — left:44, from bottom ~88px, 36px #EBEBEB */}
-        <div className="absolute bottom-[88px] left-[44px]">
+        {/* "Our Security Solutions" — left:44, from bottom ~120px, 36px #EBEBEB */}
+        <div className="absolute bottom-[54px] left-[44px]">
           <h2
             className="text-[36px] font-medium leading-[110%] text-[#EBEBEB]"
             style={{ width: "529px" }}
