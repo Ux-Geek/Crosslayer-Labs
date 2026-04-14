@@ -30,41 +30,28 @@ const cards = [
   },
 ];
 
-const proseLines = [
-  "The Crosslayer Labs founding team invented",
-  "Multi-Perspective Issuance Corroboration which now",
-  "secures the issuance of every HTTPS certificate."
-];
-
 export default function WhyUs() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const linesRef = useRef<(HTMLSpanElement | null)[]>([]);
+  const textRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 80%",
-        end: "bottom 60%",
-        scrub: 1,
+    if (!textRef.current) return;
+    
+    const words = textRef.current.querySelectorAll(".word");
+    gsap.fromTo(words, 
+      { opacity: 0, y: 15 },
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 0.8, 
+        stagger: 0.04,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 90%",
+        }
       }
-    });
-
-    linesRef.current.forEach((line) => {
-      if (line) {
-        tl.fromTo(line,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power2.out"
-          }
-        );
-      }
-    });
+    );
   }, []);
 
   return (
@@ -123,16 +110,15 @@ export default function WhyUs() {
         ))}
       </div>
 
-      {/* Founders Invention Section — Centered, reduced bottom spacing, extra tracking */}
+      {/* Founders Invention Section — SF Pro Display 24px, #8E8D8D, width 538px */}
       <div ref={containerRef} className="mt-[200px] mb-[80px] flex flex-col items-center justify-center text-center">
-        <h2 className="font-display text-[42px] leading-[1.3] tracking-[0em] text-[#101915] md:text-[52px] max-w-5xl">
-          {proseLines.map((line, idx) => (
-            <span
-              key={idx}
-              ref={el => { linesRef.current[idx] = el; }}
-              className="block opacity-0"
-            >
-              {line}
+        <h2 
+          ref={textRef}
+          className="font-display text-[24px] font-medium leading-[130%] text-[#8E8D8D] max-w-[538px]"
+        >
+          {"The Crosslayer Labs founding team invented Multi-Perspective Issuance Corroboration which now secures the issuance of every HTTPS certificate.".split(" ").map((word, i) => (
+            <span key={i} className="word inline-block mr-[0.2em] opacity-0">
+              {word}
             </span>
           ))}
         </h2>

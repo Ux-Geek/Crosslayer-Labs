@@ -34,7 +34,7 @@ export default function SolutionsSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
         className="relative w-full overflow-hidden rounded-[40px] border border-[#BABABA]"
-        style={{ height: "579px" }}
+        style={{ height: "720px" }}
       >
         <img
           src="/female_workspace_portrait.png"
