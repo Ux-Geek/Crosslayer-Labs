@@ -13,7 +13,6 @@ export default function Navbar() {
           {/* Default Logo Fallback */}
           <span
             className="w-auto whitespace-nowrap text-[16px] font-medium leading-[110%] tracking-[-0.01em] text-[#575656]"
-            style={{ fontFamily: "'SF Pro Display', -apple-system, sans-serif" }}
           >
             CrossLayer Labs
           </span>
@@ -23,29 +22,25 @@ export default function Navbar() {
         <nav className="flex h-[19px] w-[352px] flex-row items-center gap-6">
           <a
             href="#solutions"
-            className="w-[73px] text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#575656] transition-colors hover:text-[#2A2A2A]"
-            style={{ fontFamily: "'SF Pro Display', -apple-system, sans-serif" }}
+            className="w-auto text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#575656] transition-colors hover:text-[#2A2A2A]"
           >
             Solutions
           </a>
           <a
             href="#why-us"
-            className="w-[107px] text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#575656] transition-colors hover:text-[#2A2A2A]"
-            style={{ fontFamily: "'SF Pro Display', -apple-system, sans-serif" }}
+            className="w-auto text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#575656] transition-colors hover:text-[#2A2A2A]"
           >
             Why Choose Us
           </a>
           <a
             href="#team"
-            className="w-[43px] text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#575656] transition-colors hover:text-[#2A2A2A]"
-            style={{ fontFamily: "'SF Pro Display', -apple-system, sans-serif" }}
+            className="w-auto text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#575656] transition-colors hover:text-[#2A2A2A]"
           >
             Team
           </a>
           <a
             href="#industries"
-            className="w-[57px] text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#575656] transition-colors hover:text-[#2A2A2A]"
-            style={{ fontFamily: "'SF Pro Display', -apple-system, sans-serif" }}
+            className="w-auto text-[16px] font-normal leading-[110%] tracking-[-0.01em] text-[#575656] transition-colors hover:text-[#2A2A2A]"
           >
             Industry
           </a>

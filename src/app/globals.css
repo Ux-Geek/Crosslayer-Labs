@@ -2,6 +2,7 @@
 
 @theme {
   --font-display: "Gowun Batang", serif;
+  --font-sans: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --color-deep-green: #153c2f;
   --color-deep-green-hover: #1b4a3a;
   --color-muted: #69756f;
@@ -12,7 +13,7 @@
     scroll-behavior: smooth;
   }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
   }
 }
 

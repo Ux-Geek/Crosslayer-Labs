@@ -47,14 +47,13 @@ export default function SolutionsSection() {
         <div className="absolute bottom-[104px] left-[44px]">
           <h2
             className="text-[36px] font-medium leading-[110%] text-[#EBEBEB]"
-            style={{ fontFamily: "'SF Pro Display', -apple-system, sans-serif", width: "529px" }}
+            style={{ width: "529px" }}
           >
             Our Security Solutions
           </h2>
           {/* "How does GeoShield work?" — 16px #EBEBEB */}
           <p
             className="mt-[14px] text-[16px] font-medium leading-[110%] tracking-[-0.01em] text-[#EBEBEB]"
-            style={{ fontFamily: "'SF Pro Display', -apple-system, sans-serif" }}
           >
             How does GeoShield work?
           </p>
@@ -67,7 +66,7 @@ export default function SolutionsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="mt-[100px] text-[24px] font-medium leading-[110%] text-[#8E8D8D]"
-        style={{ fontFamily: "'SF Pro Display', -apple-system, sans-serif", width: "390px" }}
+        style={{ width: "390px" }}
       >
         Our platform delivers the most critical security solutions all in one place.
       </motion.p>
@@ -92,8 +91,7 @@ export default function SolutionsSection() {
 
             {/* Text — 16px, 500, 110% line-height, -0.005em tracking, #2A2A2A */}
             <p
-              className="text-[16px] font-medium leading-[110%] tracking-[-0.005em] text-[#2A2A2A]"
-              style={{ fontFamily: "'SF Pro Display', -apple-system, sans-serif" }}
+              className="text-[16px] font-normal leading-[110%] tracking-[-0.005em] text-[#2A2A2A]"
             >
               <span className="font-semibold">{item.title}</span>{" "}
               <span className="text-[#ACACAC]">{item.text}</span>
