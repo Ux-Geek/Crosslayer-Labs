@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Github, Linkedin, Twitter, Mail, ArrowRight } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
 export default function CTAFooter() {
   return (
@@ -9,7 +9,7 @@ export default function CTAFooter() {
       <div className="relative w-full overflow-hidden rounded-[40px] bg-[#101915] text-white">
         
         {/* Main Content Grid */}
-        <div className="grid gap-16 px-10 pt-24 pb-32 md:px-16 lg:grid-cols-[1.2fr_0.8fr] lg:px-20">
+        <div className="relative z-10 grid gap-16 px-10 pt-24 pb-32 md:px-16 lg:grid-cols-[1.2fr_0.8fr] lg:px-20">
           
           {/* Left Column: CTA + Newsletter Style */}
           <div className="flex flex-col">
@@ -82,9 +82,8 @@ export default function CTAFooter() {
         </div>
 
         {/* Bottom Giant Wordmark — 0.9x scale + hover glow */}
-        <div className="group/wordmark pointer-events-auto mt-12 mb-[-50px] flex w-full scale-[0.9] items-center justify-center overflow-hidden opacity-5 select-none transition-all duration-700 hover:opacity-10 hover:text-[#00FF00]">
-          <div className="flex items-center gap-12 text-[150px] md:text-[220px] lg:text-[280px] font-display font-bold whitespace-nowrap leading-none tracking-tighter">
-            <img src="/logo.svg" alt="" className="h-[200px] w-auto transition-all duration-700 group-hover/wordmark:opacity-100 opacity-50 grayscale group-hover/wordmark:grayscale-0" />
+        <div className="group/wordmark pointer-events-auto relative z-0 mt-12 mb-[-50px] flex w-full scale-[0.9] items-center justify-center overflow-hidden opacity-5 select-none transition-all duration-700 hover:opacity-10 hover:text-[#00FF00]">
+          <div className="flex items-center text-[150px] md:text-[220px] lg:text-[280px] font-display font-bold whitespace-nowrap leading-none tracking-tighter">
             CROSSLAYER
           </div>
         </div>
