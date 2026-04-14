@@ -8,19 +8,19 @@ const solutions = [
     title: "Attack Surface Discovery.",
     text: "Understand the attack surface of APIs and web services to cyber attacks.",
     icon: ShieldCheck,
-    width: "349px",
+    width: "280px",
   },
   {
     title: "Security Analytics.",
     text: "Advanced threat intelligence and analytics to identify patterns and prevent attacks before they happen.",
     icon: Radar,
-    width: "421px",
+    width: "280px",
   },
   {
     title: "Ongoing Monitoring.",
     text: "Monitoring and correlating attack signals across layers for rapid response and mitigation.",
     icon: AlarmClock,
-    width: "394px",
+    width: "280px",
   },
 ];
 
@@ -77,7 +77,7 @@ export default function SolutionsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mt-[20px] flex flex-col items-center justify-center rounded-[24px] border border-[#333333] bg-[#171717] md:flex-row"
+        className="mt-[20px] flex flex-col items-center justify-start rounded-[24px] border border-[#333333] bg-[#171717] pl-[66px] md:flex-row"
         style={{ height: "209px", gap: "88px" }}
       >
         {solutions.map((item) => (
@@ -92,7 +92,7 @@ export default function SolutionsSection() {
             {/* Text — 16px, white/grey */}
             <p
               className="text-[16px] font-normal leading-[110%] tracking-[-0.005em] text-white"
-              style={{ width: "371px" }}
+              style={{ maxWidth: "280px" }}
             >
               <span className="font-medium">{item.title}</span>{" "}
               <span className="font-normal text-[#ACACAC]">{item.text}</span>
