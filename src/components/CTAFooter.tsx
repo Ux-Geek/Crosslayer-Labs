@@ -5,11 +5,12 @@ import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
 export default function CTAFooter() {
   return (
-    <section className="mx-auto flex w-full flex-col items-center px-8 py-24">
-      <div className="relative w-full overflow-hidden rounded-[40px] bg-[#101915] text-white">
+    <section className="mx-auto flex w-full flex-col items-center px-8 pt-24 pb-0">
+      {/* Container - Glued to bottom (rounded-t-40px only) */}
+      <div className="relative w-full overflow-hidden rounded-t-[40px] bg-[#101915] text-white">
         
-        {/* Main Content Grid */}
-        <div className="relative z-10 grid gap-16 px-10 pt-24 pb-32 md:px-16 lg:grid-cols-[1.2fr_0.8fr] lg:px-20">
+        {/* Main Content Grid - Internal spacing tightened by 12px+ */}
+        <div className="relative z-10 grid gap-16 px-10 pt-20 pb-20 md:px-16 lg:grid-cols-[1.2fr_0.8fr] lg:px-20">
           
           {/* Left Column: CTA + Newsletter Style */}
           <div className="flex flex-col">
@@ -18,17 +19,17 @@ export default function CTAFooter() {
               <span className="text-[20px] font-semibold tracking-tight text-white">CrossLayer Labs</span>
             </div>
             
-            <p className="mt-8 text-sm text-white/50">
+            <p className="mt-7 text-sm text-white/50">
               2847 Mission Street<br />
               San Francisco, CA 94110
             </p>
 
-            <h2 className="font-display mt-20 text-[36px] leading-[1.1] tracking-[-0.04em] sm:text-[44px] md:text-[64px] lg:text-[72px]">
+            <h2 className="font-display mt-16 text-[36px] leading-[1.1] tracking-[-0.04em] sm:text-[44px] md:text-[64px] lg:text-[72px]">
               Ready to secure your <br /> 
               infrastructure.
             </h2>
 
-            <div className="mt-12 flex w-full max-w-md items-center gap-2 rounded-full bg-white/5 p-1 pl-4 md:pl-6">
+            <div className="mt-10 flex w-full max-w-md items-center gap-2 rounded-full bg-white/5 p-1 pl-4 md:pl-6">
               <input 
                 type="email" 
                 placeholder="Email address" 
@@ -61,7 +62,7 @@ export default function CTAFooter() {
                 Trust top network security research. Whatever's holding you back, let's solve it.
               </h3>
               
-              <div className="mt-12 flex flex-col gap-4">
+              <div className="mt-10 flex flex-col gap-4">
                 <div className="flex items-center gap-3 text-[18px] font-medium text-white hover:text-[#00FF00] transition-colors cursor-pointer">
                   <div className="rounded-full bg-white/5 p-2">
                     <Mail className="h-5 w-5" />
@@ -70,7 +71,7 @@ export default function CTAFooter() {
                 </div>
               </div>
 
-              <div className="mt-20 flex flex-col">
+              <div className="mt-16 flex flex-col">
                 <span className="text-xs uppercase tracking-widest text-white/30">Navigation</span>
                 <nav className="mt-8 flex flex-col gap-4 text-[24px] font-medium text-white/70">
                   <a href="#research" className="hover:text-white transition-colors">Research</a>
@@ -81,8 +82,8 @@ export default function CTAFooter() {
           </div>
         </div>
 
-        {/* Bottom Giant Wordmark — Responsive scale + full color hover */}
-        <div className="group/wordmark pointer-events-auto relative z-0 mt-12 mb-[-30px] flex w-full scale-[0.9] items-center justify-center overflow-hidden opacity-5 select-none transition-all duration-700 hover:opacity-100 md:mb-[-50px]">
+        {/* Bottom Giant Wordmark — Fixed to Base */}
+        <div className="group/wordmark pointer-events-auto relative z-0 mt-8 mb-[-10px] flex w-full scale-[0.9] items-center justify-center overflow-hidden opacity-5 select-none transition-all duration-700 hover:opacity-100">
           <div className="flex items-center gap-6 font-display font-bold whitespace-nowrap leading-none tracking-tighter transition-colors duration-700 group-hover/wordmark:text-[#00FF00] text-[6vw] sm:text-[120px] md:gap-12 md:text-[8vw] lg:text-[10vw]">
             <img src="/logo.svg" alt="" className="h-[5vw] min-h-[40px] w-auto transition-all duration-700 group-hover/wordmark:opacity-100 opacity-50 grayscale group-hover/wordmark:grayscale-0" />
             CrossLayer Labs
