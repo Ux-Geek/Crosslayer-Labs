@@ -1,85 +1,80 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Shield, Activity, Search } from "lucide-react";
+import { ScanSearch, ShieldAlert, Library } from "lucide-react";
 
-const infoCards = [
+const cards = [
   {
-    title: "Comprehensive Discovery",
-    text: "Automated mapping of your entire attack surface, including APIs and hidden web services.",
-    icon: Search,
+    title: "Comprehensive Protection.",
+    text: "We discover, analyze, and monitor all layers of network infrastructure on first and third-party services.",
+    icon: ScanSearch,
+    id: "1000010845",
   },
   {
-    title: "Continuous Monitoring",
-    text: "24/7 scrutiny of infrastructure signals to identify and neutralize threats in real-time.",
-    icon: Shield,
+    title: "Advanced Threat Detection.",
+    text: "We correlate signals across different layers of the network stack to neutralize threats.",
+    icon: ShieldAlert,
+    id: "1000010846",
   },
   {
-    title: "Signal Correlation",
-    text: "Advanced cross-layer analytics that connect fragmented patterns into actionable security intelligence.",
-    icon: Activity,
+    title: "Our Company",
+    text: "Our company was born out of a cutting edge network security research lab at Princeton University by some of the world experts in understanding threats to web services.",
+    icon: Library,
+    id: "1000010847",
+    lh: "130%",
   },
 ];
 
 export default function WhyUs() {
   return (
-    <section id="why-us" className="border-t border-black/6 bg-white overflow-hidden">
-      <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 lg:px-12 lg:py-32">
-        <div className="mb-16 max-w-3xl">
-          <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-[#6d7772]">Why Choose Crosslayer</p>
-          <h2 className="font-display mt-6 text-[48px] leading-[1] tracking-[-0.04em] text-[#101915] md:text-[64px]">
-            Elite security infrastructure backed by Princeton research.
-          </h2>
-        </div>
-        
-        <div className="grid gap-8 lg:grid-cols-2">
-          <motion.div 
+    <section id="why-us" className="mx-auto max-w-[1065px] px-5 py-24 md:px-0 lg:py-32">
+      {/* Title — 36px, 500, #7A7A7A, width 462px */}
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="font-display mb-[59px] text-[36px] font-medium leading-[110%] text-[#7A7A7A]"
+        style={{ width: "462px" }}
+      >
+        Trust the team that already secured 500 million+ HTTPS websites
+      </motion.h2>
+
+      {/* Cards Container — gap 36px */}
+      <div className="flex flex-col gap-[36px] md:flex-row">
+        {cards.map((card, idx) => (
+          <motion.div
+            key={card.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="group relative overflow-hidden rounded-[40px] border border-black/6 bg-[#f7faf8] transition-all"
+            transition={{ delay: idx * 0.1 }}
+            className="relative flex flex-col items-start justify-between rounded-[24px] border border-[#CECECE] bg-[#F2F2F2] p-[28px] py-[30px]"
+            style={{ width: "331px", height: "394px" }}
           >
-            <div className="aspect-[16/10] overflow-hidden">
-              <img src="/security_infrastructure_datacenter_1776039817947.png" alt="Security Infrastructure" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            {/* Top Frame — Icon + Title */}
+            <div className="flex flex-row items-center gap-[8px]">
+              <card.icon className="h-[18px] w-[18px] text-[#171717]" strokeWidth={2.5} />
+              <h3
+                className="text-[16px] font-medium leading-[110%] tracking-[0.01em] text-[#171717]"
+                style={{ fontFamily: "'SF Pro Display', -apple-system, sans-serif" }}
+              >
+                {card.title}
+              </h3>
             </div>
-            <div className="p-10">
-              <h3 className="text-[32px] font-medium tracking-[-0.03em] text-[#101915]">Global-Scale Protection</h3>
-              <p className="mt-4 text-[18px] leading-relaxed text-muted">
-                We secure the critical backbone of web operations. Our foundation is built on protecting over 500 million HTTPS websites from sophisticated hijacks and infrastructure attacks.
-              </p>
-            </div>
-          </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="group relative overflow-hidden rounded-[40px] border border-black/6 bg-[#f7faf8] transition-all"
-          >
-            <div className="aspect-[16/10] overflow-hidden">
-              <img src="/princeton_research_lab_1776039852466.png" alt="Princeton Research Lab" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            </div>
-            <div className="p-10">
-              <h3 className="text-[32px] font-medium tracking-[-0.03em] text-[#101915]">Academic Excellence</h3>
-              <p className="mt-4 text-[18px] leading-relaxed text-muted">
-                Born from a cutting-edge network security research lab at Princeton University, we bring academic-grade rigor to real-world security challenges.
-              </p>
-            </div>
+            {/* Bottom Copy — 16px, 500, 110%/130%, #8A8A8A */}
+            <p
+              className="text-[16px] font-medium tracking-[0.01em] text-[#8A8A8A]"
+              style={{ 
+                fontFamily: "'SF Pro Display', -apple-system, sans-serif", 
+                width: "275px",
+                lineHeight: card.lh || "110%"
+              }}
+            >
+              {card.text}
+            </p>
           </motion.div>
-        </div>
-
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
-          {infoCards.map((card) => (
-            <div key={card.title} className="rounded-[32px] border border-black/6 bg-white p-8 shadow-[0_14px_50px_rgba(0,0,0,0.03)]">
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-deep-green/5 text-deep-green">
-                <card.icon className="h-6 w-6" />
-              </div>
-              <h3 className="text-[24px] font-medium tracking-[-0.03em] text-[#101915]">{card.title}</h3>
-              <p className="mt-4 text-[16px] leading-relaxed text-muted">{card.text}</p>
-            </div>
-          ))}
-        </div>
+        ))}
       </div>
     </section>
   );
