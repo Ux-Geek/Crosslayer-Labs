@@ -28,13 +28,12 @@ const cards = [
 export default function WhyUs() {
   return (
     <section id="why-us" className="mx-auto max-w-[1065px] px-5 py-24 md:px-0 lg:py-32">
-      {/* Title — 36px, 500, #7A7A7A, width 462px */}
+      {/* Title — Gowun Batang, same size as Team section */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="font-display mb-[59px] text-[36px] font-medium leading-[110%] text-[#7A7A7A]"
-        style={{ width: "462px" }}
+        className="font-display mb-[59px] text-[42px] leading-[1.1] tracking-[-0.04em] text-[#7A7A7A] md:text-[52px]"
       >
         Trust the team that already secured 500 million+ HTTPS websites
       </motion.h2>
