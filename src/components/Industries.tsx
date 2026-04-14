@@ -20,7 +20,7 @@ const industries = [
 
 export default function Industries() {
   return (
-    <section id="industries" className="border-t border-black/6 bg-[#f7faf8]">
+    <section id="industries" className="bg-gradient-to-b from-white via-[#f7faf8] to-white">
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 lg:px-12 lg:py-32">
         <div className="max-w-3xl">
           <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-[#6d7772]">Industries We Secure</p>
