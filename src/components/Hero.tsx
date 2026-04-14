@@ -6,7 +6,7 @@ import { ChevronRight } from "lucide-react";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto grid min-h-[85vh] max-w-7xl items-center gap-12 px-5 pb-10 pt-16 md:px-8 md:pb-14 md:pt-20 lg:grid-cols-[1.15fr_0.85fr] lg:px-12 lg:pb-16">
+      <div className="mx-auto grid min-h-[85vh] max-w-7xl items-center gap-12 px-5 pb-10 pt-[164px] md:px-8 md:pb-14 md:pt-[180px] lg:grid-cols-[1.15fr_0.85fr] lg:px-12 lg:pb-16">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
