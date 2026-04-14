@@ -44,41 +44,37 @@ export default function Team() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1 }}
-            className="group relative overflow-hidden rounded-[40px] border border-black/6 bg-white shadow-sm transition-all hover:shadow-xl"
+            className="group relative overflow-hidden rounded-[24px] bg-[#101915] transition-all hover:shadow-2xl"
           >
-            <div className="aspect-[1/1.2] overflow-hidden grayscale transition-[filter] duration-500 group-hover:grayscale-0">
+            <div className="relative aspect-[1/1.2] overflow-hidden grayscale transition-[filter] duration-500 group-hover:grayscale-0">
               <img 
                 src={person.image} 
                 alt={person.name} 
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-            </div>
-            
-            {/* Static Base Content */}
-            <div className="p-6 transition-opacity duration-300 group-hover:opacity-0 text-center md:text-left">
-              <h3 className="text-[20px] font-semibold tracking-[-0.02em] text-[#101915]">{person.name}</h3>
-              <p className="mt-1 text-sm font-medium text-deep-green">{person.role}</p>
+              
+              {/* Always visible base info overlay (no white footer) */}
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6 transition-opacity duration-300 group-hover:opacity-0">
+                <h3 className="text-[20px] font-semibold tracking-[-0.02em] text-white">{person.name}</h3>
+                <p className="mt-1 text-sm font-medium text-white/80">{person.role}</p>
+              </div>
             </div>
 
-            {/* Hover Content */}
-            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/40 to-transparent p-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                whileHover={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
+            {/* Hover Content (Bio + Links) */}
+            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-[#101915]/95 via-[#101915]/40 to-transparent p-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <div className="transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0">
                 <h3 className="text-[24px] font-semibold text-white">{person.name}</h3>
                 <p className="mt-1 text-sm font-medium text-white/80">{person.role}</p>
                 <p className="mt-4 text-[14px] leading-relaxed text-white/70">{person.text}</p>
                 <div className="mt-6 flex flex-wrap gap-4">
                   {person.links.map((link) => (
-                    <a key={link.type} href="#" className="flex items-center gap-1.5 text-xs text-white transition hover:text-deep-green">
+                    <a key={link.type} href="#" className="flex items-center gap-1.5 text-xs text-white transition hover:text-[#00FF00]">
                       <link.icon className="h-3.5 w-3.5" />
                       {link.type}
                     </a>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         ))}
