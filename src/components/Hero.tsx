@@ -9,20 +9,13 @@ function HeroIllustrationLoop() {
   const images = ["/1hero.png", "/hero.png"];
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
-    const cycle = () => {
-      setIndex((prev) => {
-        const next = (prev + 1) % images.length;
-        // If next is 0 (1hero.png), use 2s. If next is 1 (hero.png), use 4s.
-        const delay = next === 0 ? 2000 : 4000;
-        timer = setTimeout(cycle, delay);
-        return next;
-      });
-    };
-    
-    timer = setTimeout(cycle, 1500); // Initial delay
+    // Current index is what's on screen. Set how long it stays.
+    const delay = index === 0 ? 2000 : 4000;
+    const timer = setTimeout(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, delay);
     return () => clearTimeout(timer);
-  }, []);
+  }, [index]);
 
   return (
     <div className="relative aspect-square w-full max-w-[540px] overflow-hidden rounded-[40px] bg-transparent">
@@ -30,10 +23,10 @@ function HeroIllustrationLoop() {
         <motion.img
           key={images[index]}
           src={images[index]}
-          initial={{ opacity: 0, scale: 1.05 }}
+          initial={{ opacity: 0, scale: 1.02 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.98 }}
-          transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }} // Quintic ease-out for max smoothness
           className="h-full w-full object-cover"
         />
       </AnimatePresence>
