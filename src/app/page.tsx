@@ -5,8 +5,7 @@ import WhyUs from "@/components/WhyUs";
 import Team from "@/components/Team";
 import Industries from "@/components/Industries";
 import FAQ from "@/components/FAQ";
-import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
+import CTAFooter from "@/components/CTAFooter";
 
 export default function Home() {
   return (
@@ -19,9 +18,8 @@ export default function Home() {
         <Team />
         <Industries />
         <FAQ />
-        <CTA />
+        <CTAFooter />
       </main>
-      <Footer />
     </div>
   );
 }
