@@ -27,7 +27,7 @@ const cards = [
 
 export default function WhyUs() {
   return (
-    <section id="why-us" className="mx-auto max-w-[1065px] px-5 py-24 md:px-0 lg:py-32">
+    <section id="why-us" className="mx-auto max-w-7xl px-5 py-24 md:px-0 lg:py-32">
       {/* Title — Gowun Batang, same size as Team section */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -47,8 +47,8 @@ export default function WhyUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1 }}
-            className="relative flex flex-col items-start justify-between rounded-[24px] border border-[#CECECE] bg-[#F2F2F2] p-[28px] py-[30px]"
-            style={{ width: "331px", height: "394px" }}
+            className="relative flex flex-col items-start justify-between rounded-[24px] border border-[#E3E3E3] bg-[#FAFAFA] p-[35px] py-[38px]"
+            style={{ width: "414px", height: "493px" }}
           >
             {/* Top Frame — Icon + Title */}
             <div className="flex flex-row items-center gap-[8px]">
