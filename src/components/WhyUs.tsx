@@ -1,7 +1,12 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { ScanSearch, ShieldAlert, Library } from "lucide-react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
   {
@@ -26,6 +31,28 @@ const cards = [
 ];
 
 export default function WhyUs() {
+  const textRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    if (!textRef.current) return;
+    
+    const words = textRef.current.querySelectorAll(".word");
+    gsap.fromTo(words, 
+      { opacity: 0, y: 20 },
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 0.8, 
+        stagger: 0.05,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 90%",
+        }
+      }
+    );
+  }, []);
+
   return (
     <section id="why-us" className="mx-auto max-w-7xl px-5 py-24 md:px-0 lg:py-32">
       {/* Title — Gowun Batang, same size as Team section */}
@@ -55,7 +82,6 @@ export default function WhyUs() {
               <card.icon className="h-[18px] w-[18px] text-[#171717]" strokeWidth={2.5} />
               <h3
                 className="text-[16px] font-medium leading-[110%] tracking-[0.01em] text-[#171717]"
-                style={{ fontFamily: "'SF Pro Display', -apple-system, sans-serif" }}
               >
                 {card.title}
               </h3>
@@ -81,6 +107,20 @@ export default function WhyUs() {
             </p>
           </motion.div>
         ))}
+      </div>
+
+      {/* Founders Invention Section — Centered, 44px below cards */}
+      <div className="mt-[44px] flex flex-col items-center justify-center text-center">
+        <h2 
+          ref={textRef}
+          className="font-display text-[42px] leading-[1.1] tracking-[-0.04em] text-[#101915] md:text-[52px] max-w-5xl"
+        >
+          {"The Crosslayer Labs founding team invented Multi-Perspective Issuance Corroboration which now secures the issuance of every HTTPS certificate.".split(" ").map((word, i) => (
+            <span key={i} className="word inline-block mr-[0.2em] opacity-0">
+              {word}
+            </span>
+          ))}
+        </h2>
       </div>
     </section>
   );
