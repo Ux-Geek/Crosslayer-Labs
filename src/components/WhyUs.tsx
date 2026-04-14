@@ -42,7 +42,7 @@ export default function WhyUs() {
 
   useEffect(() => {
     if (!containerRef.current) return;
-    
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
@@ -54,12 +54,12 @@ export default function WhyUs() {
 
     linesRef.current.forEach((line) => {
       if (line) {
-        tl.fromTo(line, 
+        tl.fromTo(line,
           { opacity: 0, y: 40 },
-          { 
-            opacity: 1, 
-            y: 0, 
-            duration: 1, 
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
             ease: "power2.out"
           }
         );
@@ -125,10 +125,10 @@ export default function WhyUs() {
 
       {/* Founders Invention Section — Centered, reduced bottom spacing, extra tracking */}
       <div ref={containerRef} className="mt-[200px] mb-[80px] flex flex-col items-center justify-center text-center">
-        <h2 className="font-display text-[42px] leading-[1.3] tracking-[0.05em] text-[#101915] md:text-[52px] max-w-5xl">
+        <h2 className="font-display text-[42px] leading-[1.3] tracking-[0em] text-[#101915] md:text-[52px] max-w-5xl">
           {proseLines.map((line, idx) => (
-            <span 
-              key={idx} 
+            <span
+              key={idx}
               ref={el => { linesRef.current[idx] = el; }}
               className="block opacity-0"
             >

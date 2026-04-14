@@ -8,25 +8,25 @@ const solutions = [
     title: "Attack Surface Discovery.",
     text: "Understand the attack surface of APIs and web services to cyber attacks.",
     icon: ShieldCheck,
-    width: "279px",
+    width: "349px",
   },
   {
     title: "Security Analytics.",
     text: "Advanced threat intelligence and analytics to identify patterns and prevent attacks before they happen.",
     icon: Radar,
-    width: "337px",
+    width: "421px",
   },
   {
     title: "Ongoing Monitoring.",
     text: "Monitoring and correlating attack signals across layers for rapid response and mitigation.",
     icon: AlarmClock,
-    width: "315px",
+    width: "394px",
   },
 ];
 
 export default function SolutionsSection() {
   return (
-    <section id="solutions" className="mx-auto max-w-[1106px] px-5 pt-12 md:px-8 lg:px-0">
+    <section id="solutions" className="mx-auto max-w-[1340px] px-5 pt-12 md:px-8 lg:px-0">
       {/* Big Image — 1106×579, border-radius 24, border 1px #BABABA, 40% black overlay */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -65,20 +65,20 @@ export default function SolutionsSection() {
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mt-[100px] text-[24px] font-medium leading-[110%] text-[#8E8D8D]"
+        className="mt-[100px] text-[24px] font-normal leading-[110%] text-[#8E8D8D]"
         style={{ width: "390px" }}
       >
         Our platform delivers the most critical security solutions all in one place.
       </motion.p>
 
-      {/* Solutions Bar — gap 20px from title, 1106×167, #F8F8F8, border 1px #D9D9D9, radius 24, gap 70 */}
+      {/* Solutions Bar — gap 20px from title, 1340×209, #171717, radius 24, gap 88 */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mt-[20px] flex flex-col items-center justify-center rounded-[24px] border border-[#D9D9D9] bg-[#F8F8F8] md:flex-row"
-        style={{ height: "167px", gap: "70px" }}
+        className="mt-[20px] flex flex-col items-center justify-center rounded-[24px] border border-[#333333] bg-[#171717] md:flex-row"
+        style={{ height: "209px", gap: "88px" }}
       >
         {solutions.map((item) => (
           <div
@@ -86,12 +86,12 @@ export default function SolutionsSection() {
             className="flex flex-col items-start gap-[24px] p-[10px]"
             style={{ width: item.width, height: "122px" }}
           >
-            {/* Icon — 24×24, #2A2A2A */}
-            <item.icon className="h-6 w-6 flex-none text-[#2A2A2A]" strokeWidth={1.5} />
+            {/* Icon — 24×24, grey */}
+            <item.icon className="h-6 w-6 flex-none text-[#8E8D8D]" strokeWidth={1.5} />
 
-            {/* Text — 16px, 500, 110% line-height, -0.005em tracking, #2A2A2A */}
+            {/* Text — 16px, white/grey */}
             <p
-              className="text-[16px] font-normal leading-[110%] tracking-[-0.005em] text-[#2A2A2A]"
+              className="text-[16px] font-normal leading-[110%] tracking-[-0.005em] text-white"
             >
               <span className="font-semibold">{item.title}</span>{" "}
               <span className="text-[#ACACAC]">{item.text}</span>
