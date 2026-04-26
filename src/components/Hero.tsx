@@ -38,9 +38,9 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="mx-auto grid min-h-[85vh] max-w-7xl items-center gap-16 px-5 pb-10 pt-[164px] md:px-8 md:pb-14 md:pt-[180px] lg:grid-cols-[1.1fr_0.9fr] lg:px-12 lg:pb-16">
-        
+
         {/* Left Content */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -51,10 +51,10 @@ export default function Hero() {
             infrastructure.
           </h1>
           <p className="mt-8 max-w-2xl text-[18px] leading-relaxed text-[#575656]">
-            Companies and enterprises across the world rely on the web for secure operations.
-            We protect them from ongoing website and API hijacks.
+            Companies and enterprises across the world rely on <br />the web for secure operations.
+            We protect them from <br /> ongoing website and API hijacks.
           </p>
-          
+
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="#get-started"
@@ -97,7 +97,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Right Illustration Loop */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
